@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Query Processor</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Query Processor</h1>
+        <p>Welcome to the Query Processor application. Follow the instructions below:</p>
+        <ol>
+            <li>Submit a POST request to <strong>/process_query</strong> endpoint with a JSON payload containing the query and the number of top results (k).</li>
+            <li>The application will correct the spelling, suggest synonyms, and return the top k results along with the corrected and expanded query.</li>
+        </ol>
+        <h2>Examples:</h2>
+        <div class="example">
+            <p><strong>Query:</strong> "apple"</p>
+            <p><strong>k:</strong> 3</p>
+            <p><strong>JSON Payload:</strong> {"query": "apple", "k": 3}</p>
+        </div>
+        <div class="example">
+            <p><strong>Query:</strong> "machine learning"</p>
+            <p><strong>k:</strong> 5</p>
+            <p><strong>JSON Payload:</strong> {"query": "machine learning", "k": 5}</p>
+        </div>
+    </div>
+</body>
+</html>
